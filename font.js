@@ -95,7 +95,7 @@
     AsciiArt.Figlet.newReturnContext = function(options){
         return new Promise(function(resolve, reject){
             try{
-                AsciiArt.Table.create(options, function(rendered){
+                AsciiArt.Figlet.create(options, function(err, rendered){
                     resolve(rendered);
                 });
             }catch(ex){
@@ -138,7 +138,7 @@
             callback = extended;
         }
         if(!callback){
-            return AsciiArt.Figlet.newReturnContext();
+            return AsciiArt.Figlet.newReturnContext(options);
         }else{
             AsciiArt.Figlet.write(options.text, options.font, function(text){
                 var result = safeCombine(undefined, text, options.style);
