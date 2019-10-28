@@ -128,9 +128,10 @@
             style
         );
     }
-
     AsciiArt.Figlet.create = function(options, callback, extended){
-        if(extended && typeof extended === 'function'){
+        if( (typeof callback !== 'function') ||
+            (extended && typeof extended === 'function')
+        ){
             options = {
                 text:options,
                 font:callback

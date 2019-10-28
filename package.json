@@ -1,6 +1,6 @@
 {
   "name": "ascii-art-font",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "font.js",
   "devDependencies": {
     "chai": "^4.2.0",
