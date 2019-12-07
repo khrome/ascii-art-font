@@ -18,7 +18,7 @@
         module.exports = factory(require('fs'));
     }else{
         // Browser globals (root is window)
-        root.AsciiArtImage = factory();
+        root.AsciiArtFont = factory();
     }
 }(this, function(fs){
     var AsciiArt = {};
